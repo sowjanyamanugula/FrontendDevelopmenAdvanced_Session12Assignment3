@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body">
+       
+
+        <div class="table-responsive">
+            <table class="table" *ngIf='friends && friends.length'>
+                <thead>
+                    <tr>
+                       
+                        <th>Name</th>
+                        <th>Hobby</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = 'let friend of friends| StartswithPipe '>
+                        <td>{{friend.name}}</td>
+                        <td>{{friend.hobby}}</td>
+                      
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </div>
+</div>
